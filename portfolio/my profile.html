@@ -1,0 +1,2119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sandya A | Aspiring Software Engineer &amp; Product Builder</title>
+  <meta name="description"
+    content="Portfolio of Sandya A, Computer Science engineering student in Bengaluru building software projects, AI, hackathons, and product ideas.">
+  <meta property="og:title" content="Sandya A | Aspiring Software Engineer &amp; Product Builder">
+  <meta property="og:description"
+    content="CSE student in Bengaluru building software projects, hackathon entries, and product ideas.">
+  <meta property="og:type" content="website">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233949ab'/%3E%3Ctext x='32' y='43' font-size='32' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'%3ESA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./my profile_files/css2" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fff;
+      --alt: #f6f7f9;
+      --ink: #14161a;
+      --mute: #5b6270;
+      --line: #e4e7ec;
+      --ac: #3949ab;
+      --acs: #eceefb;
+      --nav: 64px;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--nav)
+    }
+
+    body {
+      margin: 0;
+      font: 16px/1.65 Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      overflow-x: hidden
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--ac);
+      outline-offset: 3px;
+      border-radius: 4px
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: 1.15;
+      margin: 0;
+      letter-spacing: -.02em;
+      color: #0d1226
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 700
+    }
+
+    h3 {
+      font-size: 1.18rem;
+      font-weight: 650
+    }
+
+    p {
+      margin: 0 0 1em
+    }
+
+    .mute {
+      color: var(--mute)
+    }
+
+    .small {
+      font-size: .875rem
+    }
+
+    section.s {
+      padding: 96px 0
+    }
+
+    section.s.alt {
+      background: var(--alt)
+    }
+
+    .sh {
+      margin-bottom: 40px;
+      max-width: 680px
+    }
+
+    .sh p {
+      margin-top: 12px
+    }
+
+    /* nav */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      height: var(--nav);
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line)
+    }
+
+    nav .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.2rem;
+      letter-spacing: -.02em;
+      color: #0d1226;
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .logo-badge {
+      width: 32px;
+      height: 32px;
+      background: var(--ac);
+      color: #fff;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      font-size: .85rem;
+      font-weight: 800
+    }
+
+    .links {
+      display: flex;
+      gap: 20px;
+      align-items: center
+    }
+
+    .links a {
+      font-size: .9rem;
+      color: var(--mute);
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+      transition: color .2s, border-color .2s;
+      font-weight: 500;
+      cursor: pointer
+    }
+
+    .links a:hover,
+    .links a.on {
+      color: var(--ac);
+      border-color: var(--ac)
+    }
+
+    .burger {
+      display: none;
+      background: none;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center
+    }
+
+    /* buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: .95rem;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: #fff;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all .2s;
+      min-height: 44px
+    }
+
+    .btn:hover {
+      background: var(--ac);
+      border-color: var(--ac);
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px -6px rgba(57, 73, 171, .4)
+    }
+
+    .btn .ar {
+      transition: transform .2s
+    }
+
+    .btn:hover .ar,
+    .tl:hover .ar {
+      transform: translateX(4px)
+    }
+
+    .btn.o {
+      background: #fff;
+      color: var(--ink);
+      border-color: var(--line)
+    }
+
+    .btn.o:hover {
+      background: var(--acs);
+      color: var(--ac);
+      border-color: var(--ac)
+    }
+
+    .btn.sm {
+      padding: 8px 16px;
+      font-size: .85rem;
+      min-height: 36px;
+      border-radius: 6px
+    }
+
+    .tl {
+      color: var(--ac);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      transition: .2s
+    }
+
+    .tl:hover {
+      color: #283593
+    }
+
+    /* hero */
+    .hero {
+      padding: 84px 0 96px
+    }
+
+    .hg {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 56px;
+      align-items: center
+    }
+
+    .eye {
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--ac);
+      letter-spacing: .08em;
+      margin-bottom: 18px;
+      text-transform: uppercase
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.4rem);
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.1
+    }
+
+    .hero .sub {
+      font-size: 1.28rem;
+      font-weight: 600;
+      color: #2b303b;
+      margin-bottom: 16px
+    }
+
+    .hero .d {
+      max-width: 560px;
+      color: var(--mute);
+      font-size: 1.05rem;
+      line-height: 1.65
+    }
+
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin: 28px 0
+    }
+
+    .soc {
+      display: flex;
+      gap: 10px
+    }
+
+    .soc button,
+    .soc a {
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      transition: .2s;
+      background: #fff;
+      color: var(--ink);
+      cursor: pointer
+    }
+
+    .soc button:hover,
+    .soc a:hover {
+      border-color: var(--ac);
+      color: var(--ac);
+      background: var(--acs);
+      transform: translateY(-2px)
+    }
+
+    .pf {
+      position: relative;
+      max-width: 320px;
+      margin-left: auto;
+      width: 100%
+    }
+
+    .pf:before {
+      content: "";
+      position: absolute;
+      inset: -14px -14px 14px 14px;
+      background: var(--acs);
+      border-radius: 50%;
+      z-index: 0
+    }
+
+    .pf:after {
+      content: "</>";
+      position: absolute;
+      right: -6px;
+      bottom: 6px;
+      font: 700 .9rem ui-monospace, monospace;
+      color: var(--ac);
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 4px 12px;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+      z-index: 2
+    }
+
+    .pf .av {
+      position: relative;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 2px solid var(--line);
+      overflow: hidden;
+      background: var(--alt);
+      display: grid;
+      place-items: center;
+      z-index: 1;
+      box-shadow: 0 12px 32px -8px rgba(0, 0, 0, .12)
+    }
+
+    .av img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%
+    }
+
+    .av b {
+      font-size: 4rem;
+      color: var(--ac)
+    }
+
+    /* cards & grids */
+    .pg {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px
+    }
+
+    .pc {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      transition: border-color .25s, box-shadow .25s, transform .25s;
+      cursor: pointer
+    }
+
+    .pc:hover {
+      border-color: var(--ac);
+      box-shadow: 0 12px 32px -12px rgba(57, 73, 171, .28);
+      transform: translateY(-3px)
+    }
+
+    .pc .bd {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1
+    }
+
+    .pc .bd p {
+      margin: 0;
+      color: var(--mute);
+      font-size: .95rem;
+      line-height: 1.6
+    }
+
+    .cat {
+      font-size: .8rem;
+      color: var(--ac);
+      font-weight: 600;
+      letter-spacing: .02em
+    }
+
+    .ev {
+      font-size: .85rem;
+      color: var(--mute);
+      font-weight: 500
+    }
+
+    .tlg {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 24px;
+      transition: border-color .25s, box-shadow .25s, transform .25s
+    }
+
+    .hc {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .hc:hover {
+      border-color: var(--ac);
+      box-shadow: 0 10px 28px -10px rgba(57, 73, 171, .22);
+      transform: translateY(-3px)
+    }
+
+    .st {
+      align-self: flex-start;
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--ac);
+      background: var(--acs);
+      padding: 4px 10px;
+      border-radius: 999px;
+      letter-spacing: .02em
+    }
+
+    .g2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px
+    }
+
+    /* skills */
+    .sg {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px
+    }
+
+    .sg .card {
+      cursor: pointer
+    }
+
+    .sg .card:hover {
+      border-color: var(--ac);
+      box-shadow: 0 10px 28px -10px rgba(57, 73, 171, .22);
+      transform: translateY(-3px)
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px
+    }
+
+    .tag {
+      font-size: .85rem;
+      padding: 5px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--ink);
+      font-weight: 500
+    }
+
+    .alt .tag {
+      background: #fff
+    }
+
+    .tag.ac {
+      background: var(--acs);
+      border-color: #d5d9f6;
+      color: var(--ac);
+      font-weight: 600
+    }
+
+    .clickable-tag {
+      cursor: pointer;
+      transition: .2s
+    }
+
+    .clickable-tag:hover {
+      background: var(--ac);
+      color: #fff;
+      border-color: var(--ac)
+    }
+
+    .note {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: .85rem;
+      color: var(--mute);
+      border-left: 2px solid var(--ac);
+      padding-left: 10px
+    }
+
+    /* about */
+    .ag {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 56px
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 10px 26px;
+      background: #fff
+    }
+
+    .panel div {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .panel div:last-child {
+      border: 0
+    }
+
+    .panel span {
+      display: block;
+      font-size: .8rem;
+      color: var(--mute);
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      margin-bottom: 2px
+    }
+
+    .panel b {
+      font-weight: 650;
+      color: #0d1226;
+      font-size: .98rem
+    }
+
+    /* contact */
+    .ct {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto
+    }
+
+    .ct .cta {
+      justify-content: center
+    }
+
+    form {
+      text-align: left;
+      margin-top: 36px;
+      display: grid;
+      gap: 18px
+    }
+
+    label {
+      font-size: .875rem;
+      font-weight: 600;
+      display: grid;
+      gap: 6px;
+      color: #0d1226
+    }
+
+    input,
+    textarea {
+      font: inherit;
+      padding: 12px 14px;
+      border: 1px solid #cfd4dc;
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
+      width: 100%;
+      transition: border-color .2s, box-shadow .2s
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--ac);
+      box-shadow: 0 0 0 3px rgba(57, 73, 171, .15)
+    }
+
+    .err {
+      color: #b42318;
+      font-size: .8rem;
+      font-weight: 500;
+      min-height: 1em
+    }
+
+    .msg {
+      padding: 14px 18px;
+      border-radius: 8px;
+      background: var(--acs);
+      color: var(--ac);
+      font-size: .92rem;
+      font-weight: 600;
+      display: none;
+      text-align: center
+    }
+
+    /* footer */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 48px 0;
+      background: #fff
+    }
+
+    .fg {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px
+    }
+
+    .fl {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center
+    }
+
+    .fl a,
+    .fl button {
+      color: var(--mute);
+      background: none;
+      border: 0;
+      font: inherit;
+      font-size: .9rem;
+      padding: 0;
+      cursor: pointer;
+      transition: color .2s
+    }
+
+    .fl a:hover,
+    .fl button:hover {
+      color: var(--ac)
+    }
+
+    /* animation triggers */
+    .sr {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .5s ease, transform .5s ease
+    }
+
+    .sr.in {
+      opacity: 1;
+      transform: none
+    }
+
+    /* ========================================================
+   POPUP MODAL SYSTEM
+   ======================================================== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(13, 18, 38, .72);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .28s cubic-bezier(0.16, 1, 0.3, 1), visibility .28s ease;
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-box {
+      background: #fff;
+      border-radius: 18px;
+      max-width: 840px;
+      width: 100%;
+      max-height: 88vh;
+      overflow-y: auto;
+      box-shadow: 0 24px 64px -12px rgba(13, 18, 38, .35);
+      position: relative;
+      padding: 36px;
+      transform: scale(0.9) translateY(24px);
+      opacity: 0;
+      transition: transform .32s cubic-bezier(0.16, 1, 0.3, 1), opacity .28s ease;
+    }
+
+    .modal-overlay.open .modal-box {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: var(--alt);
+      color: var(--ink);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: 700;
+      transition: all .2s;
+      z-index: 10;
+    }
+
+    .modal-close-btn:hover {
+      background: var(--acs);
+      color: var(--ac);
+      border-color: var(--ac);
+      transform: rotate(90deg);
+    }
+
+    .modal-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding-right: 48px;
+    }
+
+    .modal-badge {
+      font-size: .8rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--acs);
+      color: var(--ac);
+    }
+
+    .modal-title {
+      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      font-weight: 800;
+      color: #0d1226;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .modal-tagline {
+      color: var(--mute);
+      font-size: 1.05rem;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .modal-section {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+
+    .modal-section h4 {
+      font-size: .82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--ac);
+      margin-bottom: 10px;
+    }
+
+    .modal-section p {
+      font-size: .98rem;
+      color: #2b303b;
+      line-height: 1.65;
+      margin-bottom: 10px;
+    }
+
+    .modal-preview-box {
+      margin-top: 14px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--alt);
+      max-height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-in;
+    }
+
+    .modal-preview-box img {
+      width: 100%;
+      max-height: 380px;
+      object-fit: contain;
+    }
+
+    .modal-actions {
+      margin-top: 32px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* lightbox */
+    #lb {
+      position: fixed;
+      inset: 0;
+      background: rgba(13, 18, 38, .95);
+      z-index: 1100;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center
+    }
+
+    #lb.open {
+      display: flex
+    }
+
+    #lb .stage {
+      flex: 1;
+      width: 100%;
+      overflow: auto;
+      display: grid;
+      place-items: center;
+      padding: 56px 64px
+    }
+
+    #lb img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: opacity .25s;
+      cursor: zoom-in
+    }
+
+    #lb img.z {
+      max-width: none;
+      max-height: none;
+      width: 180%;
+      cursor: zoom-out
+    }
+
+    #lb button {
+      position: absolute;
+      background: rgba(255, 255, 255, .14);
+      color: #fff;
+      border: 0;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: background .2s
+    }
+
+    #lb button:hover {
+      background: rgba(255, 255, 255, .28)
+    }
+
+    #lbx {
+      top: 14px;
+      right: 16px
+    }
+
+    #lbp {
+      left: 16px;
+      top: 50%
+    }
+
+    #lbn {
+      right: 16px;
+      top: 50%
+    }
+
+    #lbc {
+      position: absolute;
+      top: 22px;
+      left: 24px;
+      color: #fff;
+      font-size: .85rem;
+      font-weight: 600
+    }
+
+    /* responsive */
+    @media(max-width:860px) {
+      .links {
+        position: fixed;
+        top: var(--nav);
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 24px 24px;
+        border-bottom: 1px solid var(--line);
+        display: none;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, .08)
+      }
+
+      .links.open {
+        display: flex
+      }
+
+      .links a {
+        padding: 14px 0;
+        border-bottom: 1px solid var(--line)
+      }
+
+      .burger {
+        display: flex
+      }
+
+      .hg,
+      .ag {
+        grid-template-columns: 1fr;
+        gap: 40px
+      }
+
+      .pf {
+        margin: 0 auto;
+        max-width: 240px;
+        order: -1
+      }
+
+      .sg,
+      .tlg,
+      .g2,
+      .pg {
+        grid-template-columns: 1fr
+      }
+
+      .pc.lead {
+        flex-direction: column
+      }
+
+      .pc.lead .im {
+        min-height: 0;
+        aspect-ratio: 16/9
+      }
+
+      .pc.lead .bd {
+        padding: 24px
+      }
+
+      section.s {
+        padding: 68px 0
+      }
+
+      .hero {
+        padding: 44px 0 60px
+      }
+
+      .btn {
+        flex: 1 1 auto
+      }
+
+      .modal-box {
+        padding: 24px 20px 28px
+      }
+
+      #lb .stage {
+        padding: 48px 12px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav aria-label="Main">
+    <div class="wrap">
+      <a href="#home" class="logo">
+        <span class="logo-badge">SA</span>
+        <span>Sandya A</span>
+      </a>
+      <button class="burger" id="bg" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
+      <div class="links" id="lk">
+        <a href="#home" data-id="home" class="on">Home</a>
+        <a href="#projects" data-id="projects">Projects</a>
+        <a href="#hackathons" data-id="hackathons">Hackathons</a>
+        <a href="#certifications" data-id="certifications">Certifications</a>
+        <a href="#experience" data-id="experience">Experience</a>
+        <a href="#skills" data-id="skills">Skills</a>
+        <a href="#about" data-id="about">About</a>
+        <a href="#contact" data-id="contact">Contact</a>
+        <button class="btn sm o" id="navResumeBtn">Resume</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main id="app">
+
+    <!-- 1. HOME -->
+    <section class="hero" id="home">
+      <div class="wrap hg">
+        <div>
+          <div class="eye">Welcome to my portfolio</div>
+          <h1>Hi, I'm Sandya A</h1>
+          <div class="sub">Aspiring Software Engineer | Product Builder</div>
+          <p class="d">CSE engineering student in Bengaluru, building a strong foundation in software development
+            through hands-on projects, hackathons, and entrepreneurial ventures.</p>
+          <div class="cta">
+            <a class="btn" href="#projects">View My Projects <span class="ar" aria-hidden="true">→</span></a>
+            <button class="btn o" id="heroResumeBtn">Download Resume</button>
+            <a class="tl" href="#contact">Let's Connect <span class="ar" aria-hidden="true">→</span></a>
+          </div>
+          <div class="soc">
+            <a id="socGithub" href="https://github.com/sandya127" target="_blank" rel="noopener" aria-label="GitHub"
+              title="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M9 19c-4 1.5-4-2-6-2m12 4v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21">
+                </path>
+              </svg>
+            </a>
+            <a id="socLinkedin"
+              href="https://www.linkedin.com/in/sandya-a-a58514381?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z">
+                </path>
+              </svg>
+            </a>
+            <a id="socEmail" href="mailto:sandya9888@gmail.com" aria-label="Email" title="Email (sandya9888@gmail.com)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-10 6L2 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="pf">
+          <div class="av">
+            <img src="profile.jpg" alt="Portrait of Sandya A"
+              onerror="this.replaceWith(Object.assign(document.createElement('b'),{textContent:'SA'}))">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PROJECTS -->
+    <section class="s alt" id="projects">
+      <div class="wrap">
+        <div class="sh sr">
+          <h2>Projects</h2>
+          <p class="mute">Featured startup initiatives, AI systems, and software platforms I've built. Click any project
+            card to view full details.</p>
+        </div>
+        <div class="pg" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- 3. HACKATHONS -->
+    <section class="s" id="hackathons">
+      <div class="wrap">
+        <div class="sh sr">
+          <h2>Hackathons &amp; Achievements</h2>
+          <p class="mute">Competitive hackathons and prototype presentations. Click any item to pop up details and
+            certificates.</p>
+        </div>
+        <div class="tlg" id="hackathonsGrid"></div>
+      </div>
+    </section>
+
+    <!-- 4. CERTIFICATIONS -->
+    <section class="s alt" id="certifications">
+      <div class="wrap">
+        <div class="sh sr">
+          <h2>Certifications</h2>
+          <p class="mute">Verified courses and credentials completed. Click any certification to pop up details and
+            certificate preview.</p>
+        </div>
+        <div class="tlg" id="certificationsGrid"></div>
+      </div>
+    </section>
+
+    <!-- 5. EXPERIENCE -->
+    <section class="s" id="experience">
+      <div class="wrap">
+        <div class="sh sr">
+          <h2>Virtual Experience &amp; Community</h2>
+          <p class="mute">Industry job simulations completed on Forage along with community volunteering.</p>
+        </div>
+        <div class="g2" id="experienceGrid"></div>
+        <h3 style="margin:64px 0 20px;font-size:1.4rem" class="sr">Volunteering &amp; Tech Community</h3>
+        <div class="g2" id="volunteeringGrid"></div>
+      </div>
+    </section>
+
+    <!-- 6. SKILLS -->
+    <section class="s alt" id="skills">
+      <div class="wrap">
+        <div class="sh sr">
+          <h2>Skills I'm Building</h2>
+          <p class="mute">Technical competencies, toolsets, and professional strengths. Click any skill group to view
+            detailed competencies.</p>
+        </div>
+        <span class="note" style="margin:-20px 0 28px">Hands-on application through coursework and active project
+          development.</span>
+        <div class="sg" id="skillsGrid"></div>
+        <h3 style="margin:48px 0 16px" class="sr">Core Strengths</h3>
+        <div class="tags" id="strengthsGrid"></div>
+      </div>
+    </section>
+
+    <!-- 7. ABOUT -->
+    <section class="s" id="about">
+      <div class="wrap ag">
+        <div class="sr">
+          <h2 style="margin-bottom:24px">About Me</h2>
+          <p>I am Sandya A, a Computer Science and Engineering student based in Bengaluru, currently pursuing my 2nd
+            year. I enjoy turning ideas into working software and exploring how technology can solve practical
+            real-world problems.</p>
+          <p>My interests include software development, web development, artificial intelligence, product building,
+            hackathons, and entrepreneurship. I am continuously strengthening my programming fundamentals while building
+            projects that help me learn through practical experience.</p>
+          <div style="margin-top:24px">
+            <button class="btn sm" id="aboutResumeBtn">View Full Profile &amp; Resume <span class="ar"
+                aria-hidden="true">→</span></button>
+          </div>
+        </div>
+        <div class="panel sr">
+          <div><span>Education</span><b>B.E. Computer Science &amp; Engineering</b></div>
+          <div><span>Current Stage</span><b>2nd Year • 3rd Semester</b></div>
+          <div><span>Based In</span><b>Bengaluru, Karnataka</b></div>
+          <div><span>Interests</span><b>Software Development • Web Dev • AI • Product Building • Entrepreneurship</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. CONTACT -->
+    <section class="s alt" id="contact">
+      <div class="wrap ct">
+        <div class="sr">
+          <h2>Let's Build Something Together</h2>
+          <p class="mute" style="margin-top:14px">I'm always interested in learning, building, collaborating on
+            interesting projects, and exploring new opportunities.</p>
+        </div>
+        <div class="cta sr">
+          <a class="btn" href="mailto:sandya9888@gmail.com" id="contactEmailBtn">Email Me</a>
+          <a class="btn o"
+            href="https://www.linkedin.com/in/sandya-a-a58514381?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            target="_blank" rel="noopener" id="contactLinkedinBtn">LinkedIn</a>
+          <a class="btn o" href="https://github.com/sandya127" target="_blank" rel="noopener"
+            id="contactGithubBtn">GitHub</a>
+        </div>
+        <form id="cf" novalidate="" class="sr">
+          <label>Name
+            <input name="name" autocomplete="name" placeholder="Your name">
+            <span class="err"></span>
+          </label>
+          <label>Email
+            <input name="email" type="email" autocomplete="email" placeholder="Your email address">
+            <span class="err"></span>
+          </label>
+          <label>Message
+            <textarea name="message" rows="5"
+              placeholder="Tell me about your idea, project, or opportunity..."></textarea>
+            <span class="err"></span>
+          </label>
+          <button class="btn" type="submit">Send Message</button>
+          <div class="msg" id="fm" role="status"></div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap fg">
+      <div>
+        <b>Sandya A</b>
+        <p class="mute small" style="margin:6px 0 0">Aspiring Software Engineer | Product Builder</p>
+      </div>
+      <div class="fl" id="fl">
+        <a href="https://github.com/sandya127" target="_blank" rel="noopener" id="ftGithub">GitHub</a>
+        <a href="https://www.linkedin.com/in/sandya-a-a58514381?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+          target="_blank" rel="noopener" id="ftLinkedin">LinkedIn</a>
+        <a href="mailto:sandya9888@gmail.com" id="ftEmail">Email</a>
+        <button id="ftResume">Resume</button>
+      </div>
+    </div>
+    <div class="wrap">
+      <p class="mute small" style="margin:28px 0 0">© 2026 Sandya A. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- POPUP MODAL (Opens for any clicked item/button) -->
+  <div class="modal-overlay" id="popupModal" role="dialog" aria-modal="true" aria-label="Detail view">
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- IMAGE LIGHTBOX MODAL -->
+  <div id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <span id="lbc"></span>
+    <button id="lbx" aria-label="Close">✕</button>
+    <button id="lbp" aria-label="Previous">‹</button>
+    <div class="stage"><img id="lbi" alt=""></div>
+    <button id="lbn" aria-label="Next">›</button>
+  </div>
+
+  <!-- APPLICATION JAVASCRIPT -->
+  <script>
+    /* ============ CONFIGURATION & DATA ============ */
+    const CONFIG = {
+      name: "Sandya A",
+      title: "Aspiring Software Engineer | Product Builder",
+      college: "B.E. Computer Science & Engineering • AMC Engineering College",
+      location: "Electronic City, Bengaluru",
+      phone: "+91 903521728",
+      profilePhoto: "profile.jpg",
+      github: "https://github.com/sandya127",
+      linkedin: "https://www.linkedin.com/in/sandya-aa58514381",
+      email: "sandyacse131@gmail.com",
+      resume: "Sandya_A_Resume.pdf",
+      formEndpoint: ""
+    };
+
+    const item = o => Object.assign({
+      category: "", short: "", tagline: [], overview: "", problem: "", solution: "",
+      features: [], tech: [], contribution: "", event: "", status: "", date: "", org: "",
+      skills: [], image: "", certificate: "", links: { demo: "", github: "", doc: "" }
+    }, o);
+
+    const projects = [
+      item({
+        id: "foodconnect",
+        section: "projects",
+        title: "FoodConnect",
+        category: "Startup Initiative • Food Tech & Community Platform",
+        status: "Startup Initiative",
+        tagline: ["Connecting Food, Businesses & Communities."],
+        short: "FoodConnect is a startup initiative aimed at connecting food businesses, customers, and communities through a unified platform. It focuses on making food more accessible, improving connections within the food ecosystem, and reducing food wastage by creating smarter and more efficient ways to manage and distribute food.",
+        overview: "FoodConnect is a startup initiative aimed at connecting food businesses, customers, and communities through a unified platform. It focuses on making food more accessible, improving connections within the food ecosystem, and reducing food wastage by creating smarter and more efficient ways to manage and distribute food.",
+        features: [
+          "Unified digital platform connecting food vendors, restaurants, and local communities",
+          "Reduces food wastage through smart surplus food redistribution workflows",
+          "Improves food accessibility and distribution efficiency across communities",
+          "Real-time coordination tools for food businesses and local organizations"
+        ],
+        tech: ["Web Platform", "Python", "Full-Stack Development", "Sustainable Tech"]
+      }),
+      item({
+        id: "voice-assistant",
+        section: "projects",
+        title: "NEXA - Desktop Voice Assistant",
+        category: "AI & Voice Assistant • Python Automation",
+        event: "BMS Hackathon",
+        status: "Working Prototype",
+        tagline: [
+          "A voice-enabled desktop assistant built during an intensive hackathon.",
+          "Responds to spoken commands and performs useful desktop automation tasks.",
+          "Built and demonstrated live as a working prototype under tight time constraints."
+        ],
+        short: "A voice-enabled desktop assistant built during an intensive hackathon. Responds to spoken commands and performs useful desktop automation tasks. Built and demonstrated live as a working prototype under tight time constraints.",
+        overview: "Built to streamline day-to-day computer interaction, this voice assistant listens to natural speech, processes user intent, and triggers actions like launching applications, searching the web, checking weather/time, and taking voice notes.",
+        features: [
+          "Natural voice command parsing and speech recognition feedback",
+          "Automated desktop workflows, application launching, and browser navigation",
+          "Dynamic web search, real-time weather, time, and general queries",
+          "Voice note transcription and hands-free desktop control"
+        ],
+        tech: ["Python", "SpeechRecognition", "Pyttsx3", "OS Automation"]
+      }),
+      item({
+        id: "advenya",
+        section: "projects",
+        title: "ADVENYA - Smart Tourism Platform",
+        category: "Smart Tourism • Web Platform",
+        event: "Smart India Hackathon 2026",
+        status: "Shortlisted SIH 2026",
+        tagline: [
+          "Smart tourism platform designed to promote Indian tourism.",
+          "Helping users discover destinations, explore cultural heritage, and plan personalized travel experiences across India."
+        ],
+        short: "ADVENYA is a smart tourism platform designed to promote Indian tourism by helping users discover destinations, explore cultural heritage, and plan personalized travel experiences across India.",
+        overview: "ADVENYA is a smart tourism platform designed to promote Indian tourism by helping users discover destinations, explore cultural heritage, and plan personalized travel experiences across India. Developed for Smart India Hackathon 2026, the platform bridges digital discovery with India's rich cultural tapestry.",
+        features: [
+          "Interactive destination explorer highlighting heritage sites and local cultural attractions",
+          "Personalized itinerary builder tailored to traveler preferences and trip durations",
+          "Curated cultural discovery guides emphasizing local artisans, traditions, and festivals",
+          "Clean, intuitive, and mobile-responsive travel planning interface"
+        ],
+        tech: ["HTML5", "CSS3", "JavaScript", "Responsive Web Design"]
+      }),
+      item({
+        id: "resume-parser",
+        section: "projects",
+        title: "Resume Parsing Engine",
+        category: "AI & Automation • Text Processing",
+        event: "AMC Internal Hackathon",
+        status: "Hackathon Project",
+        tagline: [
+          "An automated resume processing tool developed during the AMC Internal Hackathon.",
+          "Extracts and organizes contact info, skills, education, and experience.",
+          "Built with Python and text extraction algorithms to save recruitment time."
+        ],
+        short: "An automated resume processing tool developed during the AMC Internal Hackathon that structures candidate data. Extracts and organizes contact info, skills, education, and experience using Python and text extraction algorithms.",
+        overview: "Developed during the AMC Internal Hackathon, this lightweight parser ingests candidate resumes (PDF/DOCX), segments them into standardized sections, and extracts structured data such as contact details, skills, education, and work history for easy database insertion.",
+        features: [
+          "Engineered during the AMC Internal Hackathon sprint",
+          "Automated PDF and DOCX text extraction with layout preservation",
+          "Regex and NLP pattern matching for contact details, emails, and LinkedIn profiles",
+          "Skill keyword categorization and education timeline structuring",
+          "Standardized JSON output optimized for recruiter databases and ATS systems"
+        ],
+        tech: ["Python", "NLP / RegEx", "PDFPlumber", "Data Structuring"]
+      }),
+      item({
+        id: "multilingual-assistant",
+        section: "projects",
+        title: "Real-Time Multilingual Communication Assistant (LinguaAI)",
+        category: "Generative AI • WebRTC • Vernacular Language SaaS",
+        status: "Still Developing",
+        tagline: [
+          "One World. Many Languages. One Conversation.",
+          "Continuous speech translation with real-time waveform visualization across 23+ Indian vernacular dialects and global languages.",
+          "Breaking language barriers in meetings, healthcare, and daily communication."
+        ],
+        short: "Real-time multilingual communication platform enabling live two-way voice translation, video meetings with per-user synchronized subtitles, and auto-translated chat across Indian vernacular dialects and international languages. Currently in active development.",
+        overview: "LinguaAI is a real-time multilingual communication platform designed to eliminate linguistic barriers through live voice translation, video calling with per-user subtitles, and contextual chat across Indian vernacular dialects (Kannada, Hindi, Tamil, Telugu, etc.) and international languages. Currently still developing, it includes continuous speech translation with neural voice playback, LiveKit WebRTC meetings with AI summaries, and specialized domain safeguards for Healthcare, Business, and Travel.",
+        features: [
+          "Continuous two-way speech translation with real-time waveform and neural audio playback",
+          "LiveKit WebRTC video conferences with per-user localized live subtitles",
+          "Instant WebSocket chat translation with original/translated script toggle",
+          "Vernacular idiom assistant explaining regional phrases and cultural nuances",
+          "Industry domain modes (Healthcare, Business, Travel, Education)"
+        ],
+        tech: ["FastAPI", "Next.js", "Python", "WebRTC / LiveKit", "Tailwind CSS", "Neural Speech AI"]
+      }),
+      item({
+        id: "idea-plus",
+        section: "projects",
+        title: "Startup Idea Validation - IDEAPLUS",
+        category: "Entrepreneurship • Decision Intelligence • Market Analysis",
+        status: "Still Developing",
+        tagline: ["Validate Your Idea. Minimize Risk. Build with Confidence."],
+        short: "Startup Idea Validation is a project designed to help aspiring entrepreneurs evaluate and validate their business ideas before investing significant time, money, and resources. It uses market research, customer feedback, competitor analysis, and feasibility assessment to identify opportunities, understand potential risks, and determine the market demand for an idea. The goal is to transform promising ideas into practical, market-ready business opportunities with greater confidence. Currently in active development.",
+        overview: "Startup Idea Validation (IDEAPLUS) is a project designed to help aspiring entrepreneurs evaluate and validate their business ideas before investing significant time, money, and resources. Currently still developing, it uses market research, customer feedback, competitor analysis, and feasibility assessment to identify opportunities, understand potential risks, and determine the market demand for an idea. The goal is to transform promising ideas into practical, market-ready business opportunities with greater confidence.",
+        features: [
+          "Structured market demand analysis and opportunity identification",
+          "Competitor landscape mapping and differentiation assessment",
+          "Customer feedback aggregation and risk scoring frameworks",
+          "Actionable feasibility reports to transform raw ideas into practical business opportunities"
+        ],
+        tech: ["Market Research", "Product Strategy", "Python", "Decision Intelligence", "Web UI"]
+      })
+    ];
+
+    const experience = [
+      item({
+        id: "tata-simulation",
+        section: "experience",
+        title: "Tata GenAI Powered Data Analytics Job Simulation",
+        category: "Data Analytics / GenAI",
+        org: "Tata • Forage",
+        status: "Completed",
+        short: "Completed Tata's GenAI-powered Data Analytics job simulation on Forage, gaining practical exposure to exploratory data analysis, AI delinquency prediction, and business collections strategy.",
+        tagline: [
+          "Tata GenAI-Powered Data Analytics job simulation on Forage.",
+          "Exploratory data analysis, risk profiling, and AI-driven delinquency prediction.",
+          "Business reporting and data storytelling for senior executive strategy."
+        ],
+        overview: "Delivered data-driven insights through an industry simulation created by Tata iQ on Forage. Completed practical tasks including exploratory data analysis, risk profiling, predicting delinquency with AI, and presenting business reports for an AI-driven collections strategy.",
+        features: [
+          "Exploratory data analysis and risk profiling",
+          "Predicting delinquency with AI models",
+          "Business report and data storytelling for collections strategy",
+          "Implementing an AI-driven collections strategy"
+        ],
+        tech: ["Data Analytics", "Risk Profiling", "GenAI", "Business Intelligence"],
+        certificate: "tata_analytics_certificate.jpg"
+      }),
+      item({
+        id: "deloitte-simulation",
+        section: "experience",
+        title: "Deloitte Data Analytics Job Simulation",
+        category: "Data Analytics & Forensics",
+        org: "Deloitte • Forage",
+        status: "Completed",
+        short: "Completed Deloitte Australia's Data Analytics job simulation on Forage, working through practical data analysis and forensic technology tasks.",
+        tagline: [
+          "Deloitte Australia Data Analytics job simulation on Forage.",
+          "Worked through real-world client data challenges and forensic technology.",
+          "Formulated actionable business recommendations."
+        ],
+        overview: "Engaged in hands-on tasks simulating client engagements at Deloitte Australia. Completed practical tasks in data analysis, forensic technology, quality validation, and structured presentation materials for executive recommendations.",
+        features: [
+          "Data analysis and data examination",
+          "Forensic technology workflows",
+          "Drafted executive summaries and actionable client recommendations"
+        ],
+        tech: ["Data Analytics", "Forensic Technology", "Excel / Spreadsheets", "Client Reporting"],
+        certificate: "deloitte_analytics_certificate.png"
+      })
+    ];
+
+    const volunteering = [
+      item({
+        id: "avishkar",
+        section: "experience",
+        title: "Avishkar AI Code Kudla",
+        category: "Volunteering / Community Leadership",
+        event: "Avishkar AI Event • Mangalore",
+        status: "Volunteer Awardee",
+        short: "Awarded Certificate of Appreciation for commendable work ethic and magnanimous volunteering for CODE KUDLA 2026 by Avishkar AI at wrkwrk, Mangalore.",
+        tagline: [
+          "Awarded Certificate of Appreciation by Avishkar AI.",
+          "Recognized for commendable work ethic and volunteering for CODE KUDLA 2026 in Mangalore.",
+          "Engaged with developer communities, founders, and tech participants."
+        ],
+        overview: "Awarded a Certificate of Appreciation by Avishkar AI leadership for commendable work ethic and magnanimous volunteering at CODE KUDLA 2026 held at wrkwrk, Kottara Chowki, Mangalore. Assisted teams with event logistics, coordinated technical workshop sessions, and actively supported the developer community.",
+        features: [
+          "Official Certificate of Appreciation from Avishkar AI Co-Founders",
+          "Event logistics, team coordination, and participant assistance",
+          "Exposure to emerging AI technology trends and startup community builders"
+        ],
+        tech: ["Event Coordination", "Community Building", "Leadership"],
+        certificate: "avishkar_certificate.jpg"
+      })
+    ];
+
+    const hackathons = [
+      item({
+        id: "sih-2026",
+        section: "hackathons",
+        title: "Smart India Hackathon 2026",
+        category: "National Hackathon",
+        status: "Shortlisted",
+        short: "Awarded Certificate of Participation from AMCEC & MoE's Innovation Cell for Internal Hackathon SIH 2026, shortlisted with ADVENYA smart tourism platform.",
+        tagline: ["National-level hackathon organized by MoE Innovation Cell and AMCEC.", "Shortlisted after competitive evaluations with ADVENYA."],
+        overview: "Awarded official Certificate of Participation from AMC Engineering College (Department of CSE) and Ministry of Education's Innovation Cell for participating in internal hackathon SIH 2026 conducted on 08 September 2026, shortlisted with the ADVENYA smart tourism platform.",
+        features: ["Official AMCEC & MoE Innovation Cell SIH 2026 Certificate", "Ideation, prototype development, and pitch presentation", "National-level hackathon problem-solving focus"],
+        certificate: "sih_certificate.jpg"
+      }),
+      item({
+        id: "hack-malenadu",
+        section: "hackathons",
+        title: "Hack Malenadu",
+        category: "State Level Hackathon",
+        event: "Team VisionX",
+        status: "Shortlisted from 729 teams",
+        short: "Competed as Team VisionX and was shortlisted among the top contenders from 729 competing teams.",
+        tagline: ["Hack Malenadu at JNNCE Shivamogga with Team VisionX.", "Selected from a massive pool of 729 teams."],
+        overview: "Built an innovative software solution under hackathon conditions, collaborating with teammates to design, develop, and present a working prototype before an esteemed judging panel.",
+        features: ["Top-tier ranking among 729 teams", "Rapid prototyping and agile team collaboration", "Technical presentation and live evaluation"],
+        certificate: "../doc/shivamogga hac.jpeg"
+      }),
+      item({
+        id: "blackbox",
+        section: "hackathons",
+        title: "VIT Chennai BLACKBOX",
+        category: "Hackathon",
+        status: "Offline Finals",
+        short: "Qualified through rigorous online rounds to compete in the prestigious offline finals at VIT Chennai.",
+        tagline: ["VIT Chennai BLACKBOX hackathon.", "Advanced all the way to the offline finals."],
+        overview: "Demonstrated technical problem solving and coding capabilities during the intense offline rounds at VIT Chennai, building solutions to surprise challenge statements.",
+        features: ["Offline hackathon finals at VIT Chennai", "Live coding and problem solving under constraints", "Interaction with developers from across India"]
+      }),
+      item({
+        id: "iith-aiml",
+        section: "hackathons",
+        title: "IIT Hyderabad National AI/ML Hackathon",
+        category: "National AI / ML Hackathon",
+        status: "Participated & Developed IntelliCredit",
+        short: "Participated and engineered IntelliCredit, an AI-powered corporate credit intelligence platform.",
+        tagline: ["IIT Hyderabad National AI/ML Hackathon.", "Engineered IntelliCredit under hackathon guidelines."],
+        overview: "Developed a comprehensive machine learning and financial analysis prototype to assist lending institutions in risk scoring and automated loan assessment.",
+        features: ["Financial data modelling with Python", "Explainable AI recommendations", "National-level technical exposure"],
+        certificate: "../doc/iit hac.jpeg"
+      }),
+      item({
+        id: "bms-hackathon",
+        section: "hackathons",
+        title: "BMS Hackathon",
+        category: "College Hackathon",
+        status: "Project Developed",
+        short: "Built and demonstrated a voice-enabled desktop assistant under tight hackathon time constraints.",
+        tagline: ["BMS Hackathon hands-on sprint.", "Built a voice-enabled desktop assistant."],
+        overview: "Hands-on hackathon sprint focused on human-computer interaction, speech recognition, and desktop automation using Python.",
+        features: ["Live working prototype demonstration", "Audio input processing and system automation", "Rapid prototyping under pressure"],
+        certificate: "../doc/BMS hac.jpeg"
+      }),
+      item({
+        id: "amc-internal",
+        section: "hackathons",
+        title: "AMC Internal Hackathon",
+        category: "Internal Engineering Hackathon",
+        status: "Built Resume Parsing Engine",
+        short: "Competed in the AMC Internal Hackathon where our team engineered and demonstrated the Resume Parsing Engine for candidate data structuring.",
+        tagline: ["AMC Internal Engineering Hackathon.", "Engineered the Resume Parsing Engine to automate recruitment workflows."],
+        overview: "Participated in the AMC Internal Hackathon and built the Resume Parsing Engine, an automated tool designed to extract, organize, and structure candidate information from resumes into standardized data formats.",
+        features: [
+          "Developed Resume Parsing Engine prototype under hackathon sprint",
+          "Multi-format document text extraction and entity segmentation",
+          "Collaborative teamwork, rapid prototyping, and live demonstration"
+        ],
+        certificate: "../doc/EEE AMC.jpeg"
+      })
+    ];
+
+    const certs = [
+      item({
+        id: "cert-c",
+        section: "certifications",
+        title: "C Programming",
+        org: "Infosys Springboard",
+        status: "Certified",
+        short: "Foundational programming certification issued by Infosys Springboard.",
+        tagline: ["Comprehensive C programming credentials from Infosys Springboard.", "Covers core syntax, memory management, pointers, and algorithms."],
+        overview: "Demonstrated strong understanding of procedural programming, control structures, pointer arithmetic, memory allocation, and data structures in C.",
+        features: ["Pointers and memory management", "Control flow and function recursion", "Data structures fundamentals"],
+        certificate: "../doc/infosys.jpeg",
+        skills: ["C Programming", "Algorithms", "Memory Management"]
+      }),
+      item({
+        id: "cert-celonis",
+        section: "certifications",
+        title: "Celonis Foundations",
+        org: "Celonis Academy",
+        status: "Verified Credential",
+        short: "Official credential in Process Intelligence, Process Mining, Celonis Apps, and Celonis Action Flows (automation) issued by Celonis Academy.",
+        tagline: ["Official Celonis Academy credential in Process Mining and Process Intelligence.", "Covers Celonis Apps, Execution Management, and Action Flows automation."],
+        overview: "The earner of this credential has demonstrated a profound interest and understanding of the Celonis Platform, putting into context terms such as Process Intelligence, Process Mining, Celonis Apps, and Celonis Action Flows (automation). Issued by Celonis SL on Nov 16, 2026.",
+        features: ["Process Intelligence and Process Mining fundamentals", "Celonis Apps and operational workflow management", "Celonis Action Flows and automated decisioning"],
+        certificate: "celonis_certificate.jpg",
+        skills: ["Process Mining", "Process Intelligence", "Celonis", "Workflow Automation"]
+      }),
+      item({
+        id: "cert-ms-ai",
+        section: "certifications",
+        title: "AI Skills Passport",
+        org: "EY & Microsoft",
+        status: "Certificate of Completion",
+        short: "Official Certificate of Completion for the AI Skills Passport course offered jointly by EY and Microsoft.",
+        tagline: [
+          "Certified by EY and Microsoft for completing AI Skills Passport.",
+          "Completed general and employability sections covering Sustainability, Business & Technology."
+        ],
+        overview: "This is to certify that Sandya A has successfully completed the course AI Skills Passport offered jointly by EY and Microsoft. Completed both the general and employability sections covering Sustainability, Business & Entrepreneurship, and Technology.",
+        features: [
+          "Jointly issued by Ernst & Young (EY) and Microsoft",
+          "Comprehensive AI fundamentals, technology ethics, and real-world tools",
+          "Employability training across Sustainability, Business & Entrepreneurship, and Technology"
+        ],
+        certificate: "microsoft_ai_skills_passport.png",
+        skills: ["Artificial Intelligence", "AI Tools & Frameworks", "Technology & Innovation", "Employability"]
+      })
+    ];
+
+    const skillsData = {
+      "Programming": {
+        tags: ["C Programming", "Python", "Data Structures & Algorithms"],
+        desc: "Strong foundation in procedural and object-oriented programming, data structures, and algorithm problem-solving.",
+        highlight: "Applied across multiple projects including NEXA Voice Assistant, FoodConnect, and Resume Parsing Engine."
+      },
+      "Web Development": {
+        tags: ["HTML5", "CSS3", "JavaScript", "Responsive Web Design"],
+        desc: "Building clean, accessible, modern web interfaces with responsive layouts, semantic markup, and interactive client-side logic.",
+        highlight: "Built web platforms like ADVENYA for Smart India Hackathon 2026, LinguaAI, and FoodConnect."
+      },
+      "Tools & Platforms": {
+        tags: ["Git", "GitHub", "VS Code", "Microsoft Office"],
+        desc: "Version control workflows, source code collaboration on GitHub, and documentation tooling.",
+        highlight: "Daily usage for code management and team collaboration in hackathons and development sprints."
+      }
+    };
+
+    const strengths = [
+      "Leadership", "Teamwork", "Communication", "Presentation",
+      "Problem Solving", "Team Coordination", "Creativity", "Product Thinking"
+    ];
+
+    /* Combined lookup list for popup routing */
+    const ALL_ITEMS = [...projects, ...hackathons, ...certs, ...experience, ...volunteering];
+
+    /* ============ RENDER CARDS ============ */
+    const $ = (s, r = document) => r.querySelector(s);
+    const esc = s => String(s || "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    const arr = '<span class="ar" aria-hidden="true">→</span>';
+
+    // Project card (displays project & description cleanly without certificates)
+    function renderProjectCard(it, i) {
+      return `
+  <article class="card pc sr" tabindex="0" role="button" data-id="${it.id}" aria-label="Open ${esc(it.title)}">
+    <div class="bd">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:6px">
+        <span class="cat">${esc(it.category)}</span>
+        ${it.status ? `<span class="st">${esc(it.status)}</span>` : ''}
+      </div>
+      <h3 style="font-size:1.32rem;margin-bottom:8px;color:#0d1226">${esc(it.title)}</h3>
+      ${it.tagline && it.tagline.length ? `<p style="font-weight:600;color:var(--ac);margin:0 0 10px;font-size:.9rem">${esc(it.tagline[0])}</p>` : ''}
+      <p style="color:var(--mute);margin-bottom:16px;line-height:1.65;font-size:.95rem">${esc(it.short)}</p>
+      ${it.tech && it.tech.length ? `<div class="tags" style="margin-top:auto;margin-bottom:16px">${it.tech.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>` : ''}
+      <span class="tl" style="margin-top:auto;padding-top:6px">View Project Details ${arr}</span>
+    </div>
+  </article>`;
+    }
+
+    // Mini card (hackathons / certs / experience)
+    function renderMiniCard(it) {
+      return `
+  <article class="card hc sr" tabindex="0" role="button" data-id="${it.id}" aria-label="Open ${esc(it.title)}">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px">
+      <h3>${esc(it.title)}</h3>
+      ${it.status ? `<span class="st">${esc(it.status)}</span>` : ''}
+    </div>
+    ${it.event ? `<span class="ev">${esc(it.event)}</span>` : (it.org ? `<span class="ev">${esc(it.org)}</span>` : (it.category ? `<span class="ev">${esc(it.category)}</span>` : ''))}
+    <p class="mute small" style="margin:0">${esc(it.short)}</p>
+    <span class="tl small" style="margin-top:auto">View Details ${arr}</span>
+  </article>`;
+    }
+
+    function createPh() {
+      const d = document.createElement("div");
+      d.className = "ph";
+      d.textContent = "Sandya A • Project";
+      return d;
+    }
+
+    /* ============ POPUP MODAL HANDLER ============ */
+    const popupModal = $("#popupModal");
+    const modalBox = $("#modalBox");
+    const modalBody = $("#modalBody");
+    const modalCloseBtn = $("#modalCloseBtn");
+
+    function openPopup(contentHtml) {
+      modalBody.innerHTML = contentHtml;
+      popupModal.classList.add("open");
+      document.body.style.overflow = "hidden";
+      modalBox.scrollTop = 0;
+      modalCloseBtn.focus();
+    }
+
+    function closePopup() {
+      popupModal.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    modalCloseBtn.onclick = closePopup;
+    popupModal.onclick = e => { if (e.target === popupModal) closePopup(); };
+
+    addEventListener("keydown", e => {
+      if (e.key === "Escape") {
+        if (lb.classList.contains("open")) closeLb();
+        else if (popupModal.classList.contains("open")) closePopup();
+      }
+    });
+
+    // Render Item Details in Popup
+    function showItemPopup(it) {
+      const isPdf = it.certificate && it.certificate.toLowerCase().endsWith(".pdf");
+      const isImage = it.certificate && (it.certificate.toLowerCase().endsWith(".jpeg") || it.certificate.toLowerCase().endsWith(".jpg") || it.certificate.toLowerCase().endsWith(".png"));
+
+      let badges = [];
+      if (it.category) badges.push(it.category);
+      if (it.status) badges.push(it.status);
+      if (it.event) badges.push(it.event);
+      if (it.org) badges.push(it.org);
+
+      let html = `
+    <div class="modal-badge-row">
+      ${badges.map(b => `<span class="modal-badge">${esc(b)}</span>`).join('')}
+    </div>
+    <h3 class="modal-title">${esc(it.title)}</h3>
+    ${it.tagline && it.tagline.length ? `<div class="modal-tagline">${it.tagline.map(t => `<p style="margin:0 0 6px">${esc(t)}</p>`).join('')}</div>` : ''}
+
+    <div class="modal-section">
+      <h4>Overview</h4>
+      <p>${esc(it.overview || it.short)}</p>
+    </div>
+  `;
+
+      if (it.features && it.features.length) {
+        html += `
+    <div class="modal-section">
+      <h4>Key Highlights &amp; Features</h4>
+      <ul style="margin:8px 0 0;padding-left:20px;color:#2b303b">
+        ${it.features.map(f => `<li style="margin-bottom:6px">${esc(f)}</li>`).join('')}
+      </ul>
+    </div>`;
+      }
+
+      if (it.tech && it.tech.length) {
+        html += `
+    <div class="modal-section">
+      <h4>Technologies &amp; Tools</h4>
+      <div class="tags" style="margin-top:8px">
+        ${it.tech.map(t => `<span class="tag ac">${esc(t)}</span>`).join('')}
+      </div>
+    </div>`;
+      }
+
+      if (it.certificate && it.section !== "projects") {
+        html += `
+    <div class="modal-section">
+      <h4>Certificate / Document Preview</h4>
+      ${isImage ? `
+        <div class="modal-preview-box" onclick="openLightboxImage('${esc(it.certificate)}', '${esc(it.title)}')">
+          <img src="${esc(it.certificate)}" alt="${esc(it.title)} certificate">
+        </div>
+        <p class="small mute" style="margin-top:6px">Click image to enlarge.</p>
+      ` : ''}
+      <div style="margin-top:12px">
+        <a class="btn sm" href="${esc(it.certificate)}" target="_blank" rel="noopener">
+          ${isPdf ? 'Open Full Certificate PDF ↗' : 'View High-Res Certificate ↗'}
+        </a>
+      </div>
+    </div>`;
+      }
+
+      html += `
+    <div class="modal-actions">
+      <button class="btn sm o" onclick="closePopup()">Close</button>
+      <a class="btn sm" href="#contact" onclick="closePopup()">Get In Touch ${arr}</a>
+    </div>
+  `;
+
+      openPopup(html);
+    }
+
+    // Render Skill Group in Popup
+    function showSkillPopup(category, data) {
+      let html = `
+    <div class="modal-badge-row">
+      <span class="modal-badge">Technical Competency</span>
+      <span class="modal-badge">In Progress &amp; Applied</span>
+    </div>
+    <h3 class="modal-title">${esc(category)}</h3>
+    <div class="modal-tagline"><p>${esc(data.desc)}</p></div>
+
+    <div class="modal-section">
+      <h4>Key Skills &amp; Concepts</h4>
+      <div class="tags" style="margin-top:10px">
+        ${data.tags.map(t => `<span class="tag ac" style="font-size:1rem;padding:6px 16px">${esc(t)}</span>`).join('')}
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <h4>Application in Projects</h4>
+      <p>${esc(data.highlight)}</p>
+    </div>
+
+    <div class="modal-actions">
+      <a class="btn sm" href="#projects" onclick="closePopup()">Explore Related Projects ${arr}</a>
+      <button class="btn sm o" onclick="closePopup()">Close</button>
+    </div>
+  `;
+      openPopup(html);
+    }
+
+    // Render Resume in Popup
+    function showResumePopup() {
+      let html = `
+    <div class="modal-badge-row">
+      <span class="modal-badge">Curriculum Vitae</span>
+      <span class="modal-badge">Computer Science &amp; Engineering</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:18px;margin-bottom:18px">
+      <img src="${esc(CONFIG.profilePhoto)}" alt="${esc(CONFIG.name)}" style="width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:center 15%;border:2px solid var(--line)" onerror="this.style.display='none'">
+      <div>
+        <h3 class="modal-title" style="margin-bottom:4px">${esc(CONFIG.name)}</h3>
+        <p class="mute" style="margin:0"><strong>${esc(CONFIG.title)}</strong> • ${esc(CONFIG.college)}</p>
+        <p class="mute small" style="margin:4px 0 0">${esc(CONFIG.location)} • ${esc(CONFIG.phone)} • <a href="mailto:${esc(CONFIG.email)}" style="color:var(--ac)">${esc(CONFIG.email)}</a></p>
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <h4>Academic Education</h4>
+      <div style="display:grid;gap:8px">
+        <div>
+          <strong>AMC Engineering College, Bengaluru</strong> (2024 – Present)<br>
+          <span style="color:#2b303b">B.E. in Computer Science and Engineering — SGPA (Sem 1): <strong>6.35</strong></span>
+        </div>
+        <div>
+          <strong>Spurthy PU College</strong> (2024)<br>
+          <span style="color:#2b303b">Pre-University Course (PCMC) — <strong>85.5%</strong> (Ranked 1st in PCMC Stream &amp; 4th Overall in Science Stream)</span>
+        </div>
+        <div>
+          <strong>SK Public School</strong> (2022)<br>
+          <span style="color:#2b303b">Secondary School Leaving Certificate (SSLC) — <strong>82.24%</strong> (Ranked 1st among girls &amp; 3rd overall)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <h4>Featured Projects</h4>
+      <ul style="padding-left:20px;color:#2b303b;margin:6px 0 0">
+        <li><strong>IntelliCredit – AI Credit Analysis Tool:</strong> Built an AI credit risk assessment engine integrating multi-factor corporate financial metrics and SHAP Explainable AI for decision transparency (IIT Hyderabad Hackathon).</li>
+        <li><strong>Predictive Maintenance Agent:</strong> Developed web-based system to predict machine failure modes before occurrence, reducing unplanned operational downtime.</li>
+        <li><strong>Smart Home Automation System:</strong> Deployed IoT home automation using ESP8266 microcontroller, ambient sensors, and MQTT control logic.</li>
+        <li><strong>Resume Parsing Engine:</strong> Developed during the AMC Internal Hackathon to ingest multi-format resumes and extract standardized candidate data.</li>
+        <li><strong>ADVENYA:</strong> Smart tourism platform shortlisted for Smart India Hackathon 2026.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>Technical Skills</h4>
+      <p style="margin-bottom:4px"><strong>Languages:</strong> Python, C, C++</p>
+      <p style="margin-bottom:4px"><strong>Web &amp; Tools:</strong> Flask, HTML5, CSS3, JavaScript, Git, GitHub, VS Code, Arduino IDE, MQTT</p>
+      <p style="margin-bottom:4px"><strong>AI/ML &amp; Analytics:</strong> Scikit-learn, SHAP (Explainable AI), Pandas, Matplotlib, Data Analytics, Process Mining</p>
+      <p style="margin:0"><strong>Soft Skills:</strong> Communication, Teamwork, Leadership, Quick Learner, Adaptability</p>
+    </div>
+
+    <div class="modal-section">
+      <h4>Certifications</h4>
+      <ul style="padding-left:20px;color:#2b303b;margin:6px 0 0">
+        <li><strong>AI Skills Passport:</strong> Jointly certified by <strong>EY and Microsoft</strong>.</li>
+        <li><strong>Celonis Foundations:</strong> Process Intelligence &amp; Mining by <strong>Celonis Academy</strong>.</li>
+        <li><strong>C Programming &amp; Python Fundamentals:</strong> Certified by <strong>Infosys Springboard</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>Hackathons &amp; Academic Honors</h4>
+      <ul style="padding-left:20px;color:#2b303b;margin:6px 0 0">
+        <li><strong>National AI/ML Hackathon (IIT Hyderabad &amp; Vivriti Capital):</strong> Built IntelliCredit with Explainable AI.</li>
+        <li><strong>Smart India Hackathon 2026:</strong> Shortlisted at national level (ADVENYA).</li>
+        <li><strong>Hack Malenadu, Shivamogga (Team TECH ELITE):</strong> Shortlisted among Top 150 teams out of 729 teams.</li>
+        <li><strong>AMC Internal Hackathon:</strong> Built Resume Parsing Engine.</li>
+        <li><strong>Academic Excellence:</strong> Ranked 1st in PCMC &amp; 4th in Science in II PUC (featured in press); 1st among girls in SSLC.</li>
+        <li><strong>State-Level Recognition:</strong> Winner of Rajyabatta Kavana Competition; recipient of SSP Academic Merit Scholarship.</li>
+      </ul>
+    </div>
+
+    <div class="modal-actions">
+      <a class="btn" href="${esc(CONFIG.resume)}" download="Sandya_A_Resume.pdf" target="_blank" rel="noopener">
+        Download PDF Resume <span class="ar" aria-hidden="true">↓</span>
+      </a>
+      <a class="btn o" href="${esc(CONFIG.resume)}" target="_blank" rel="noopener">
+        View PDF In New Tab ↗
+      </a>
+      <a class="btn o" href="Sandya_A_Resume.html" target="_blank" rel="noopener">
+        Web Resume View ↗
+      </a>
+      <button class="btn o" onclick="closePopup()">Close</button>
+    </div>
+  `;
+      openPopup(html);
+    }
+
+    // Social / Quick Connect Popup
+    function showConnectPopup(platform) {
+      const p = platform.toLowerCase();
+      if (p === "email") {
+        window.location.href = "mailto:" + CONFIG.email;
+        return;
+      }
+      let url = CONFIG[p];
+      if (url) {
+        window.open(url, "_blank", "noopener");
+        return;
+      }
+      let html = `
+    <div class="modal-badge-row">
+      <span class="modal-badge">Let's Connect</span>
+    </div>
+    <h3 class="modal-title">${esc(platform)} Connection</h3>
+    <div class="modal-tagline"><p>Reach out directly to Sandya A for collaborations, opportunities, or hackathon discussions.</p></div>
+
+    <div class="modal-section">
+      <h4>Direct Contact</h4>
+      <p><strong>Email:</strong> ${esc(CONFIG.email)}</p>
+      <p><strong>Location:</strong> Bengaluru, Karnataka</p>
+    </div>
+
+    <div class="modal-actions">
+      <a class="btn sm" href="mailto:${esc(CONFIG.email)}">Send Email Directly ${arr}</a>
+      <a class="btn sm o" href="#contact" onclick="closePopup()">Use Contact Form</a>
+      <button class="btn sm o" onclick="closePopup()">Close</button>
+    </div>
+  `;
+      openPopup(html);
+    }
+
+    /* ============ LIGHTBOX VIEWER ============ */
+    const lb = $("#lb"), lbi = $("#lbi"), lbc = $("#lbc");
+    let lbImages = [], lbIndex = 0;
+
+    function openLightboxImage(src, title) {
+      lbImages = [{ src, title }];
+      lbIndex = 0;
+      lbi.src = src;
+      lbi.alt = title || "Certificate preview";
+      lbc.textContent = title || "";
+      lb.classList.add("open");
+      $("#lbp").style.display = $("#lbn").style.display = "none";
+    }
+
+    function closeLb() {
+      lb.classList.remove("open");
+    }
+    $("#lbx").onclick = closeLb;
+    lb.onclick = e => { if (e.target === lb || e.target.classList.contains("stage")) closeLb(); };
+    lbi.onclick = () => lbi.classList.toggle("z");
+
+    /* ============ INITIALIZE SECTIONS ============ */
+    function initContent() {
+      // 2. Projects
+      $("#projectsGrid").innerHTML = projects.map(renderProjectCard).join("");
+
+      // 3. Hackathons
+      $("#hackathonsGrid").innerHTML = hackathons.map(renderMiniCard).join("");
+
+      // 4. Certifications
+      $("#certificationsGrid").innerHTML = certs.map(renderMiniCard).join("");
+
+      // 5. Experience
+      $("#experienceGrid").innerHTML = experience.map(renderMiniCard).join("");
+      $("#volunteeringGrid").innerHTML = volunteering.map(renderMiniCard).join("");
+
+      // 6. Skills
+      $("#skillsGrid").innerHTML = Object.entries(skillsData).map(([k, v]) => `
+    <div class="card sr" tabindex="0" role="button" data-skill="${esc(k)}" aria-label="View ${esc(k)} skills">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h3>${esc(k)}</h3>
+        <span class="st" style="font-size:.7rem">Click to view</span>
+      </div>
+      <div class="tags">
+        ${v.tags.map(t => `<span class="tag clickable-tag" data-skill="${esc(k)}">${esc(t)}</span>`).join("")}
+      </div>
+      <p class="mute small" style="margin-top:14px">${esc(v.desc)}</p>
+    </div>
+  `).join("");
+
+      $("#strengthsGrid").innerHTML = strengths.map(t => `<span class="tag ac">${esc(t)}</span>`).join("");
+    }
+
+    initContent();
+
+    /* ============ EVENT LISTENERS & POPUP HOOKS ============ */
+    // Global delegate for clicking any project/hackathon/cert card or button
+    document.addEventListener("click", e => {
+      // Card click (data-id)
+      const card = e.target.closest("[data-id]");
+      if (card && !e.target.closest("a.btn")) {
+        const id = card.getAttribute("data-id");
+        const found = ALL_ITEMS.find(x => x.id === id);
+        if (found) {
+          showItemPopup(found);
+          return;
+        }
+      }
+
+      // Skill card or tag click (data-skill)
+      const skillEl = e.target.closest("[data-skill]");
+      if (skillEl) {
+        const key = skillEl.getAttribute("data-skill");
+        if (skillsData[key]) {
+          showSkillPopup(key, skillsData[key]);
+          return;
+        }
+      }
+    });
+
+    // Resume Buttons
+    $("#navResumeBtn").onclick = showResumePopup;
+    $("#heroResumeBtn").onclick = showResumePopup;
+    $("#aboutResumeBtn").onclick = showResumePopup;
+    $("#ftResume").onclick = showResumePopup;
+
+    // Mobile burger toggle
+    const burger = $("#bg"), navLinks = $("#lk");
+    burger.onclick = () => {
+      const isOpen = navLinks.classList.toggle("open");
+      burger.setAttribute("aria-expanded", isOpen);
+    };
+    navLinks.addEventListener("click", e => {
+      if (e.target.closest("a") || e.target.closest("button")) {
+        navLinks.classList.remove("open");
+      }
+    });
+
+    // Active nav on scroll
+    const sections = document.querySelectorAll("section[id]");
+    const navAnchors = document.querySelectorAll(".links a[data-id]");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navAnchors.forEach(a => {
+            a.classList.toggle("on", a.getAttribute("data-id") === id);
+          });
+        }
+      });
+    }, { rootMargin: "-30% 0px -60% 0px" });
+
+    sections.forEach(s => observer.observe(s));
+
+    // Reveal animation observer
+    const srObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          srObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll(".sr").forEach(el => srObserver.observe(el));
+
+    // Contact Form validation & submission
+    const contactForm = $("#cf");
+    contactForm.addEventListener("submit", ev => {
+      ev.preventDefault();
+      let valid = true;
+      const data = Object.fromEntries(new FormData(contactForm));
+
+      const validateField = (name, condition, msg) => {
+        const errSpan = contactForm.elements[name].nextElementSibling;
+        errSpan.textContent = condition ? msg : "";
+        if (condition) valid = false;
+      };
+
+      validateField("name", !data.name || data.name.trim().length < 2, "Please enter your name.");
+      validateField("email", !data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email), "Please enter a valid email address.");
+      validateField("message", !data.message || data.message.trim().length < 6, "Message should be at least 6 characters.");
+
+      if (!valid) return;
+
+      const statusMsg = $("#fm");
+      statusMsg.style.display = "block";
+
+      if (CONFIG.formEndpoint) {
+        fetch(CONFIG.formEndpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(data)
+        })
+          .then(r => {
+            if (!r.ok) throw 0;
+            statusMsg.textContent = "Message sent successfully! Thank you for connecting.";
+            contactForm.reset();
+          })
+          .catch(() => {
+            statusMsg.textContent = "Message could not be sent. Please email directly at " + CONFIG.email;
+          });
+      } else {
+        statusMsg.textContent = "Thank you, " + data.name + "! Form submitted. You can also reach Sandya directly at " + CONFIG.email;
+        contactForm.reset();
+      }
+    });
+  </script>
+</body>
+
+</html>
