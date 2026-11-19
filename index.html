@@ -1087,7 +1087,7 @@
                 </path>
               </svg>
             </a>
-            <a id="socEmail" href="mailto:sandya9888@gmail.com" aria-label="Email" title="Email (sandya9888@gmail.com)">
+            <a id="socEmail" href="#contact" aria-label="Send Message" title="Send a Message">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect x="2" y="4" width="20" height="16" rx="2"></rect>
@@ -1205,7 +1205,7 @@
             interesting projects, and exploring new opportunities.</p>
         </div>
         <div class="cta sr">
-          <a class="btn" href="mailto:sandya9888@gmail.com" id="contactEmailBtn">Email Me</a>
+          <a class="btn" href="#cf" id="contactEmailBtn">Send Message</a>
           <a class="btn o"
             href="https://www.linkedin.com/in/sandya-a-a58514381?utm_source=share_via&utm_content=profile&utm_medium=member_android"
             target="_blank" rel="noopener" id="contactLinkedinBtn">LinkedIn</a>
@@ -1245,7 +1245,7 @@
         <a href="https://github.com/sandya127" target="_blank" rel="noopener" id="ftGithub">GitHub</a>
         <a href="https://www.linkedin.com/in/sandya-a-a58514381?utm_source=share_via&utm_content=profile&utm_medium=member_android"
           target="_blank" rel="noopener" id="ftLinkedin">LinkedIn</a>
-        <a href="mailto:sandya9888@gmail.com" id="ftEmail">Email</a>
+        <a href="#contact" id="ftEmail">Contact</a>
         <button id="ftResume">Resume</button>
       </div>
     </div>
@@ -1279,13 +1279,13 @@
       title: "Aspiring Software Engineer | Product Builder",
       college: "B.E. Computer Science & Engineering • AMC Engineering College",
       location: "Electronic City, Bengaluru",
-      phone: "+91 903521728",
+      phone: "+91 9035211728",
       profilePhoto: "profile.jpg",
       github: "https://github.com/sandya127",
       linkedin: "https://www.linkedin.com/in/sandya-aa58514381",
-      email: "sandyacse131@gmail.com",
+      email: "sandya9888@gmail.com",
       resume: "Sandya_A_Resume.pdf",
-      formEndpoint: ""
+      formEndpoint: "https://formsubmit.co/ajax/sandya9888@gmail.com"
     };
 
     const item = o => Object.assign({
@@ -1621,15 +1621,24 @@
       item({
         id: "cert-c",
         section: "certifications",
-        title: "C Programming",
+        title: "C Programming Course",
         org: "Infosys Springboard",
-        status: "Certified",
-        short: "Foundational programming certification issued by Infosys Springboard.",
-        tagline: ["Comprehensive C programming credentials from Infosys Springboard.", "Covers core syntax, memory management, pointers, and algorithms."],
-        overview: "Demonstrated strong understanding of procedural programming, control structures, pointer arithmetic, memory allocation, and data structures in C.",
-        features: ["Pointers and memory management", "Control flow and function recursion", "Data structures fundamentals"],
-        certificate: "../doc/infosys.jpeg",
-        skills: ["C Programming", "Algorithms", "Memory Management"]
+        status: "Course Completed",
+        short: "Official Course Completion Certificate for the C Programming Course awarded by Infosys Springboard.",
+        tagline: [
+          "Official Course Completion Certificate from Infosys Springboard.",
+          "Awarded on January 21, 2026, by Infosys Education, Training and Assessment.",
+          "Covers core procedural programming, pointers, memory management, and data structures."
+        ],
+        overview: "Awarded official Course Completion Certificate for successfully completing the C Programming Course on January 21, 2026, certified by Infosys Springboard under Satheesha B. Nanjappa (Senior Vice President and Head, Education, Training and Assessment, Infosys Limited).",
+        features: [
+          "Official Course Completion Certificate from Infosys Springboard",
+          "Completed and certified on January 21, 2026",
+          "Procedural programming, control flow, functions, and recursion",
+          "Pointer arithmetic, dynamic memory allocation, and data structures fundamentals"
+        ],
+        certificate: "c_programming_certificate.jpg",
+        skills: ["C Programming", "Algorithms", "Memory Management", "Data Structures"]
       }),
       item({
         id: "cert-celonis",
@@ -1879,7 +1888,7 @@
       <div>
         <h3 class="modal-title" style="margin-bottom:4px">${esc(CONFIG.name)}</h3>
         <p class="mute" style="margin:0"><strong>${esc(CONFIG.title)}</strong> • ${esc(CONFIG.college)}</p>
-        <p class="mute small" style="margin:4px 0 0">${esc(CONFIG.location)} • ${esc(CONFIG.phone)} • <a href="mailto:${esc(CONFIG.email)}" style="color:var(--ac)">${esc(CONFIG.email)}</a></p>
+        <p class="mute small" style="margin:4px 0 0">${esc(CONFIG.location)} • ${esc(CONFIG.phone)}</p>
       </div>
     </div>
 
@@ -1960,35 +1969,12 @@
     // Social / Quick Connect Popup
     function showConnectPopup(platform) {
       const p = platform.toLowerCase();
-      if (p === "email") {
-        window.location.href = "mailto:" + CONFIG.email;
-        return;
-      }
       let url = CONFIG[p];
       if (url) {
         window.open(url, "_blank", "noopener");
         return;
       }
-      let html = `
-    <div class="modal-badge-row">
-      <span class="modal-badge">Let's Connect</span>
-    </div>
-    <h3 class="modal-title">${esc(platform)} Connection</h3>
-    <div class="modal-tagline"><p>Reach out directly to Sandya A for collaborations, opportunities, or hackathon discussions.</p></div>
-
-    <div class="modal-section">
-      <h4>Direct Contact</h4>
-      <p><strong>Email:</strong> ${esc(CONFIG.email)}</p>
-      <p><strong>Location:</strong> Bengaluru, Karnataka</p>
-    </div>
-
-    <div class="modal-actions">
-      <a class="btn sm" href="mailto:${esc(CONFIG.email)}">Send Email Directly ${arr}</a>
-      <a class="btn sm o" href="#contact" onclick="closePopup()">Use Contact Form</a>
-      <button class="btn sm o" onclick="closePopup()">Close</button>
-    </div>
-  `;
-      openPopup(html);
+      location.hash = "#contact";
     }
 
     /* ============ LIGHTBOX VIEWER ============ */
@@ -2139,25 +2125,42 @@
 
       const statusMsg = $("#fm");
       statusMsg.style.display = "block";
+      statusMsg.style.color = "inherit";
+      statusMsg.textContent = "Sending your message...";
 
-      if (CONFIG.formEndpoint) {
-        fetch(CONFIG.formEndpoint, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify(data)
-        })
-          .then(r => {
-            if (!r.ok) throw 0;
-            statusMsg.textContent = "Message sent successfully! Thank you for connecting.";
-            contactForm.reset();
-          })
-          .catch(() => {
-            statusMsg.textContent = "Message could not be sent. Please email directly at " + CONFIG.email;
-          });
-      } else {
-        statusMsg.textContent = "Thank you, " + data.name + "! Form submitted. You can also reach Sandya directly at " + CONFIG.email;
-        contactForm.reset();
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
       }
+
+      fetch(CONFIG.formEndpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          message: data.message,
+          _subject: "New Portfolio Message from " + data.name,
+          _captcha: "false"
+        })
+      })
+        .then(r => {
+          if (!r.ok) throw new Error();
+          statusMsg.style.color = "#16a34a";
+          statusMsg.textContent = "✓ Message sent successfully! Thank you for reaching out.";
+          contactForm.reset();
+        })
+        .catch(() => {
+          statusMsg.style.color = "#dc2626";
+          statusMsg.textContent = "Message could not be sent right now. Please check your connection and try again.";
+        })
+        .finally(() => {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Send Message";
+          }
+        });
     });
   </script>
 </body>
